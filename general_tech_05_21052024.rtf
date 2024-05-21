@@ -1,0 +1,95 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 SQL\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 -- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1084  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  25.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 select * from customers where age > 25;\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 -- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1080 \u1084 \u1103  \u1080  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1102  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1080 \u1079  \u1057 \u1064 \u1040 .\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 select first_name, last_name from customers where country = 'USA';\
+\
+select * from customers where age between 25 and 30;\
+select * from customers where age >=25 and age <= 30;\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 -- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1084  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  30 \u1080 \u1083 \u1080  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  25.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 select * from customers where age not between 25 and 30;\
+select * from customers where age >30 or age < 25;\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 -- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1080 \u1079  USA \u1080 \u1083 \u1080  UK.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 select * from customers where country = 'USA' or country = 'UK';\
+select * from customers where country in ('USA', 'UK');\
+\
+select * from customers where first_name not in ('John', 'David', 'Alex');\
+select * from customers where first_name != 'John' and first_name != 'David' and first_name != 'Alex';\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 -- LIKE % _\
+\
+column like 'A%'\
+like '%B'\
+like '_a%'\
+like '____'\
+\
+select * from customers where last_name like 'R%';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1091  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1093  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1103  \u1079 \u1072 \u1082 \u1072 \u1085 \u1095 \u1080 \u1074 \u1072 \u1077 \u1090 \u1089 \u1103  \
+select * from customers where last_name like '%e';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1091  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1093  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1103  \u1085 \u1077  \u1079 \u1072 \u1082 \u1072 \u1085 \u1095 \u1080 \u1074 \u1072 \u1077 \u1090 \u1089 \u1103  \u1085 \u1072  E.\
+select * from customers where last_name not like '%e';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1091  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1093  \u1080 \u1084 \u1103  \u1089 \u1086 \u1076 \u1077 \u1088 \u1078 \u1080 \u1090  \u1073 \u1091 \u1082 \u1074 \u1091  B.\
+select * from customers where first_name like '%b%';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1075 \u1076 \u1077  \u1074 \u1090 \u1086 \u1088 \u1072 \u1103  \u1073 \u1091 \u1082 \u1074 \u1072  \u1074  \u1080 \u1084 \u1077 \u1085 \u1080  O.\
+select * from customers where first_name like '_o%';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1075 \u1076 \u1077  \u1095 \u1077 \u1090 \u1074 \u1077 \u1088 \u1090 \u1072 \u1103  \u1073 \u1091 \u1082 \u1074 \u1072  \u1074  \u1080 \u1084 \u1077 \u1085 \u1080  N.\
+select * from customers where first_name like '___n%';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1082 \u1091 \u1087 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081  \u1075 \u1076 \u1077  \u1074  \u1089 \u1077 \u1088 \u1077 \u1076 \u1080 \u1085 \u1077  \u1080 \u1084 \u1077 \u1085 \u1080  \u1077 \u1089 \u1090 \u1100  \u1073 \u1091 \u1082 \u1074 \u1072  B.\
+select * from customers where first_name like '_%b%_';\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1077  \u1080 \u1079  \u1076 \u1077 \u1087 \u1072 \u1088 \u1090 \u1072 \u1084 \u1077 \u1085 \u1090 \u1072  100.\
+select * from Employees where department_id = 100;\
+\
+-- \uc0\u1053 \u1072 \u1081 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074 , \u1079 \u1072 \u1088 \u1072 \u1073 \u1072 \u1090 \u1099 \u1074 \u1072 \u1102 \u1097 \u1080 \u1093  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  5000\
+select * from Employees where salary > 5000;\
+\
+-- \uc0\u1053 \u1072 \u1081 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074 , \u1095 \u1100 \u1103  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1103  \u1085 \u1072 \u1095 \u1080 \u1085 \u1072 \u1077 \u1090 \u1089 \u1103  \u1085 \u1072  \u1073 \u1091 \u1082 \u1074 \u1091  L\
+select * from employees where last_name like 'l%';\
+\
+-- \uc0\u1053 \u1072 \u1081 \u1090 \u1080  \u1074 \u1089 \u1077  \u1076 \u1077 \u1087 \u1072 \u1088 \u1090 \u1072 \u1084 \u1077 \u1085 \u1090 \u1099 , \u1091  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1093  location_id 1700\
+select * from Departments where location_id = 1700;\
+\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1079 \u1072 \u1088 \u1087 \u1083 \u1072 \u1090 \u1091  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1072  \u1089  \u1080 \u1084 \u1077 \u1085 \u1077 \u1084  \'91Lex\'92 \u1080  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1077 \u1081  \'91De Haan'\
+select salary  from Employees where first_name = 'Lex' and last_name = 'De Haan';\
+select salary  from Employees where first_name like 'Lex' and last_name like 'De Haan';\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1089  job_id \'91FI_ACCOUNT\'92 \u1080  \u1079 \u1072 \u1088 \u1072 \u1073 \u1072 \u1090 \u1099 \u1074 \u1072 \u1102 \u1097 \u1080 \u1093  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  8000\
+select *  from Employees where job_id like 'FI_ACCOUNT' and salary < 8000;\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074 , \u1091  \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1093  \u1074  \u1092 \u1072 \u1084 \u1080 \u1083 \u1080 \u1080  \u1074  \u1089 \u1077 \u1088 \u1077 \u1076 \u1080 \u1085 \u1077  \u1089 \u1083 \u1086 \u1074 \u1072  \u1074 \u1089 \u1090 \u1088 \u1077 \u1095 \u1072 \u1102 \u1090 \u1089 \u1103  \u1089 \u1086 \u1095 \u1077 \u1090 \u1072 \u1085 \u1080 \u1103  \'91kk\'92 \u1080 \u1083 \u1080  \'91ll\'92\
+select *  from Employees where last_name like '_%kk%_' or last_name like '_%ll%_';\
+\
+-- \uc0\u1053 \u1072 \u1081 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1080 \u1079  \u1076 \u1077 \u1087 \u1072 \u1088 \u1090 \u1072 \u1084 \u1077 \u1085 \u1090 \u1086 \u1074  60, 30 \u1080 \u1083 \u1080  100.\
+select *  from Employees where department_id in (60, 30, 100);\
+\
+-- \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1082 \u1088 \u1086 \u1084 \u1077  \u1090 \u1077 \u1093 , \u1082 \u1090 \u1086  \u1088 \u1072 \u1073 \u1086 \u1090 \u1072 \u1077 \u1090  \u1074  \u1076 \u1077 \u1087 \u1072 \u1088 \u1090 \u1072 \u1084 \u1077 \u1085 \u1090 \u1072 \u1093  80 \u1080  110\
+select *  from Employees where department_id not in (80, 110);\
+select *  from Employees where department_id != 80 and department_id !=110;}
