@@ -1,0 +1,278 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red247\green250\blue248;
+\red0\green0\blue0;\red247\green250\blue248;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000;\cssrgb\c97616\c98401\c97763;
+\cssrgb\c0\c0\c0;\cssrgb\c97616\c98400\c97763;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.user.insertOne(\{\
+first_name:'Tom',\
+last_name: 'Jameson',\
+age: 25\
+\})\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf2 \strokec5 db.user.insertMany([\
+  \{\
+first_name:'Tom1',\
+last_name: 'Jameson1',\
+age: 251\
+\},\
+\{\
+first_name:'Tom2',\
+last_name: 'Jameson2',\
+age: 252\
+\},\
+\{\
+first_name:'Tom3',\
+last_name: 'Jameson3',\
+age: 253\
+\}\
+])\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf2 \strokec4 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1042 \u1099 \u1073 \u1086 \u1088 \u1082 \u1072  \u1089  \u1091 \u1089 \u1083 \u1086 \u1074 \u1080 \u1077 \u1084 \
+db.workers.find(\{\uc0\u1091 \u1089 \u1083 \u1086 \u1074 \u1080 \u1077 \})\
+// \uc0\u1054 \u1087 \u1077 \u1088 \u1072 \u1090 \u1086 \u1088 \u1099  \u1089 \u1088 \u1072 \u1074 \u1085 \u1077 \u1085 \u1080 \u1103 \
+// $eq : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103  \u1088 \u1072 \u1074 \u1085 \u1099  - equal\
+// $ne : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103  \u1085 \u1077  \u1088 \u1072 \u1074 \u1085 \u1099  - not equal\
+// $gt : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  \u1076 \u1088 \u1091 \u1075 \u1086 \u1075 \u1086  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103  - greater than\
+// $gte : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  \u1080 \u1083 \u1080  \u1088 \u1072 \u1074 \u1085 \u1086  \u1076 \u1088 \u1091 \u1075 \u1086 \u1084 \u1091  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1102  - greater than equal\
+// $lt : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  \u1076 \u1088 \u1091 \u1075 \u1086 \u1075 \u1086  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1103  - less than\
+// $lte : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  \u1080 \u1083 \u1080  \u1088 \u1072 \u1074 \u1085 \u1086  \u1076 \u1088 \u1091 \u1075 \u1086 \u1084 \u1091  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1102  - less than equal\
+// $in : \uc0\u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077  \u1089 \u1086 \u1086 \u1090 \u1074 \u1077 \u1090 \u1089 \u1090 \u1074 \u1091 \u1077 \u1090  \u1086 \u1076 \u1085 \u1086 \u1084 \u1091  \u1080 \u1079  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1081  \u1074  \u1084 \u1072 \u1089 \u1089 \u1080 \u1074 \u1077 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.workers.find(\{firstname:'\uc0\u1048 \u1085 \u1085 \u1072 '\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \strokec4 \
+\
+//\uc0\u1074 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1091  \u1082 \u1086 \u1075 \u1086  \u1079 \u1087  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  \cf2 \outl0\strokewidth0 4000\cf2 \outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 db.workers.find(\{salary:\{$lt:4000\}\})\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \outl0\strokewidth0 //\uc0\u1074 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1091  \u1082 \u1086 \u1075 \u1086  \u1079 \u1087  > 4000\cf2 \outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 db.workers.find(\{salary:\{$gt:4000\}\})\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1072  \u1089  \u1080 \u1084 \u1077 \u1085 \u1077 \u1084  \u1053 \u1080 \u1082 \u1080 \u1090 \u1072 .\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.workers.find(\{firstname : '\uc0\u1053 \u1080 \u1082 \u1080 \u1090 \u1072 '\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1089  \u1079 \u1072 \u1088 \u1087 \u1083 \u1072 \u1090 \u1086 \u1081  \u1085 \u1077  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  5000.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.workers.find(\{salary:\{$gt:5000\}\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1089 \u1086 \u1090 \u1088 \u1091 \u1076 \u1085 \u1080 \u1082 \u1086 \u1074  \u1082 \u1088 \u1086 \u1084 \u1077  \u1053 \u1080 \u1082 \u1080 \u1090 \u1099 .\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.workers.find(\{firstname:\{$ne:'\uc0\u1053 \u1080 \u1082 \u1080 \u1090 \u1072 '\}\})\
+\
+//\uc0\u1085 \u1086 \u1074 \u1072 \u1103  \u1041 \u1044 \
+use tasks\
+\
+db.tasks.insertMany([\
+  \{\
+_id: 1,\
+title:'Potato',\
+price: 370,\
+count: 5,\
+country: 'Germany'\
+\},\
+ \{\
+_id: 2,\
+title:'Onion',\
+price: 320,\
+count: 3,\
+country: 'Poland'\
+\},\
+ \{\
+_id: 3,\
+title:'Tomato',\
+price: 210,\
+count: 9,\
+country: 'Spain'\
+\},\
+ \{\
+_id: 4,\
+title:'Carrot',\
+price: 280,\
+count: 4,\
+country: 'France'\
+\}\
+])\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077  \u1080 \u1079  \u1082 \u1086 \u1083 \u1083 \u1077 \u1082 \u1094 \u1080 \u1080 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.tasks.find()\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+// \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1090 \u1086 \u1083 \u1100 \u1082 \u1086  \u1090 \u1077  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 , \u1075 \u1076 \u1077  \u1082 \u1086 \u1083 /\u1074 \u1086  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  5\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.tasks.find(\{count:\{$gt:5\}\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+// \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 , \u1075 \u1076 \u1077  \u1094 \u1077 \u1085 \u1072  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077 /\u1088 \u1072 \u1074 \u1085 \u1086  300\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.tasks.find(\{price:\{$lte:300\}\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+// \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 , \u1075 \u1076 \u1077  \u1089 \u1090 \u1088 \u1072 \u1085 \u1072  \u1083 \u1080 \u1073 \u1086  \u1048 \u1089 \u1087 \u1072 \u1085 \u1080 \u1103 , \u1083 \u1080 \u1073 \u1086  \u1060 \u1088 \u1072 \u1085 \u1094 \u1080 \u1103 
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+db.tasks.find(\{ country: \{ $in: ['Spain', 'France'] \} \})\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // cls - \uc0\u1054 \u1095 \u1080 \u1097 \u1072 \u1077 \u1090  \u1089 \u1082 \u1088 \u1080 \u1087 \u1090 /\u1082 \u1086 \u1085 \u1089 \u1086 \u1083 \u1100 \
+// show databases - \uc0\u1055 \u1086 \u1082 \u1072 \u1079 \u1099 \u1074 \u1072 \u1077 \u1090  \u1074 \u1089 \u1077  \u1073 \u1076 \
+// show collections - \uc0\u1055 \u1086 \u1082 \u1072 \u1079 \u1099 \u1074 \u1072 \u1077 \u1090  \u1074 \u1089 \u1077  \u1082 \u1086 \u1083 \u1083 \u1077 \u1082 \u1094 \u1080 \u1080  \u1074  \u1073 \u1076 \
+// db.dropDatabase() - \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090  \u1073 \u1076 \
+// db.collection_name.drop() - \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090  \u1082 \u1086 \u1083 \u1083 \u1077 \u1082 \u1094 \u1080 \u1102 
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // db.collection_name.deleteOne(\{\uc0\u1059 \u1089 \u1083 \u1086 \u1074 \u1080 \u1077 \}) - \u1059 \u1076 \u1072 \u1083 \u1080 \u1090  \u1087 \u1077 \u1088 \u1074 \u1091 \u1102  \u1079 \u1072 \u1087 \u1080 \u1089 \u1100  \u1089 \u1086 \u1086 \u1090 \u1074 \u1077 \u1090 \u1089 \u1090 \u1074 \u1091 \u1102 \u1097 \u1080 \u1081  \u1079 \u1072 \u1087 \u1088 \u1086 \u1089 \u1091 \
+// db.collection_name.deleteMany(\{\uc0\u1059 \u1089 \u1083 \u1086 \u1074 \u1080 \u1077 \}) - - \u1059 \u1076 \u1072 \u1083 \u1080 \u1090  \u1074 \u1089 \u1077  \u1079 \u1072 \u1087 \u1080 \u1089 \u1080  \u1089 \u1086 \u1086 \u1090 \u1074 \u1077 \u1090 \u1089 \u1090 \u1074 \u1091 \u1102 \u1097 \u1080 \u1077  \u1079 \u1072 \u1087 \u1088 \u1086 \u1089 \u1091 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 // new database\
+use new_tasks\
+\
+db.users.insertMany([\
+  \{\
+_id: 1,\
+firsta_name:'Joht',\
+last_name: 'Smith',\
+age: 30\
+\},\
+ \{\
+_id: 2,\
+firsta_name:'Bob',\
+last_name: 'Brown',\
+age: 36\
+\},\
+ \{\
+_id: 3,\
+firsta_name:'Derek',\
+last_name: 'Smith',\
+age: 27\
+\},\
+\{\
+_id: 4,\
+firsta_name:'Leo',\
+last_name: 'Brown',\
+age: 23\
+\},\
+\{\
+_id: 5,\
+firsta_name:'Lily',\
+last_name: 'Jonson',\
+age: 21\
+\},\
+\{\
+_id: 6,\
+firsta_name:'John',\
+last_name: 'King',\
+age: 27\
+\}\
+])\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1074 \u1089 \u1077 \u1093  \u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.users.find()\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+// \uc0\u1042 \u1099 \u1074 \u1077 \u1089 \u1090 \u1080  \u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1084  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  25\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.users.find(\{age:\{$gt:25\}\})\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090 \u1100  \u1087 \u1077 \u1088 \u1074 \u1086 \u1075 \u1086  \u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1103 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1086 \u1084 \u1091  \u1084 \u1077 \u1085 \u1100 \u1096 \u1077  25
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 db.users.deleteOne(\{age:\{$lt:25\}\})\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090 \u1100  \u1074 \u1089 \u1077 \u1093  \u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1077 \u1081 , \u1082 \u1086 \u1090 \u1086 \u1088 \u1099 \u1084  \u1073 \u1086 \u1083 \u1100 \u1096 \u1077  25
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 db.users.deleteMany(\{age: \{$gt:25\}\})\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 // \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090 \u1100  \u1082 \u1086 \u1083 \u1083 \u1077 \u1082 \u1094 \u1080 \u1102  users\
+db.users.drop()\
+// \uc0\u1059 \u1076 \u1072 \u1083 \u1080 \u1090 \u1100  \u1073 \u1076  new_tasks\
+db.dropDatabase()
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+}
