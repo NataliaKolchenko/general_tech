@@ -1,122 +1,96 @@
-{\rtf1\ansi\ansicpg1251\cocoartf2636
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+use GT20024
+
+db.createCollection("user")
+
+db.user.insertOne({
+first_name:"John", 
+last_name:"Smith", 
+age:30, 
+friends:["Bob", "Derek", "Daniel"],
+address:{
+	street: "Brr street",
+	building:20
 }
-{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red248\green250\blue247;
-\red247\green250\blue248;\red252\green87\blue52;\red43\green184\blue255;\red248\green250\blue249;\red15\green29\blue38;
+})
+
+
+db.user.insertOne({
+first_name:"John", 
+last_name:"Smith", 
+age:30, 
+friends:["Bob", "Derek", "Daniel"],
+address:{
+	street: "Brr street",
+	building:20
 }
-{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c99985;\cssrgb\c0\c1\c1;\cssrgb\c97681\c98465\c97582;
-\cssrgb\c97616\c98401\c97763;\cssrgb\c99841\c43252\c26140;\cssrgb\c18143\c77490\c100000;\cssrgb\c97647\c98431\c98039;\cssrgb\c6667\c15294\c20000;
+})
+
+db.fruits.insertOne({
+    name: 'Apple',
+    price: 100,
+    count: 5
+})
+
+// Создать коллекцию products и заполнить документами со следующими свойствами: 
+// _id, title, price, count. Используйте следующие данные:
+	
+// 1 Apple 280 4
+// 2 Lemon 300 8
+// 3 Lime 500 3
+// 4 Orange 200 8
+
+db.product.insertOne({
+_id:1,
+title:"Apple",
+price:280,
+count:4
+})
+
+
+{
+  acknowledged: true,
+  insertedId: 1
 }
-\paperw11900\paperh16840\margl1440\margr1440\vieww35640\viewh19380\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
 
-\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
-use GT20024\
-\
-db.createCollection("user")\
-\
-db.user.insertOne(\{\
-first_name:"John", \
-last_name:"Smith", \
-age:30, \
-friends:["Bob", "Derek", "Daniel"],\
-address:\{\
-	street: "Brr street",\
-	building:20\
-\}\
-\})\
-\
-\
-db.user.insertOne(\{\
-first_name:"John", \
-last_name:"Smith", \
-age:30, \
-friends:["Bob", "Derek", "Daniel"],\
-address:\{\
-	street: "Brr street",\
-	building:20\
-\}\
-\})\
-\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
 
-\f1\fs24 \cf2 \kerning1\expnd0\expndtw0 db.fruits.insertOne(\{\
-    name: 'Apple',\
-    price: 100,\
-    count: 5\
-\})\
-\
-// \uc0\u1057 \u1086 \u1079 \u1076 \u1072 \u1090 \u1100  \u1082 \u1086 \u1083 \u1083 \u1077 \u1082 \u1094 \u1080 \u1102  products \u1080  \u1079 \u1072 \u1087 \u1086 \u1083 \u1085 \u1080 \u1090 \u1100  \u1076 \u1086 \u1082 \u1091 \u1084 \u1077 \u1085 \u1090 \u1072 \u1084 \u1080  \u1089 \u1086  \u1089 \u1083 \u1077 \u1076 \u1091 \u1102 \u1097 \u1080 \u1084 \u1080  \u1089 \u1074 \u1086 \u1081 \u1089 \u1090 \u1074 \u1072 \u1084 \u1080 : \
-// _id, title, price, count. \uc0\u1048 \u1089 \u1087 \u1086 \u1083 \u1100 \u1079 \u1091 \u1081 \u1090 \u1077  \u1089 \u1083 \u1077 \u1076 \u1091 \u1102 \u1097 \u1080 \u1077  \u1076 \u1072 \u1085 \u1085 \u1099 \u1077 :\
-	\
-// 1 Apple 280 4\
-// 2 Lemon 300 8\
-// 3 Lime 500 3\
-// 4 Orange 200 8\
-\
-\pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
-db.product.insertOne(\{\
-_id:1,\
-title:"Apple",\
-price:280,\
-count:4\
-\})\
-\
-\
-\{\
-  acknowledged: true,\
-  insertedId: 1\
-\}\
-\
-\
-\
-db.product.insertOne(\{\
-_id:2,\
-title:"Lemon",\
-price:300,\
-count:8\
-\})\
-\
-\
-\{\
-  acknowledged: true,\
-  insertedId: 2\
-\}\
-\
-\
-\
-db.product.insertOne(\{\
-_id:3,\
-title:"Lime",\
-price:500,\
-count:3\
-\})\
-\
-\
-\{\
-  acknowledged: true,\
-  insertedId: 3\
-\}\
-\
-\
-\
-db.product.insertOne(\{\
-_id:4,\
-title:"Orange",\
-price:200,\
-count:8\
-\})\
-\
-\pard\pardeftab720\partightenfactor0
+db.product.insertOne({
+_id:2,
+title:"Lemon",
+price:300,
+count:8
+})
 
-\f0 \cf8 \cb9 db.product.find()\
-\pard\pardeftab720\partightenfactor0
 
-\f2 \cf2 \cb3 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
-
-\f0 \cf2 \cb3 \
+{
+  acknowledged: true,
+  insertedId: 2
 }
+
+
+
+db.product.insertOne({
+_id:3,
+title:"Lime",
+price:500,
+count:3
+})
+
+
+{
+  acknowledged: true,
+  insertedId: 3
+}
+
+
+
+db.product.insertOne({
+_id:4,
+title:"Orange",
+price:200,
+count:8
+})
+
+db.product.find()
+
+
