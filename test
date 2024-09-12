@@ -1,0 +1,178 @@
+db.user.insertOne({
+first_name:'Tom',
+last_name: 'Jameson',
+age: 25
+})
+
+db.user.insertMany([
+  {
+first_name:'Tom1',
+last_name: 'Jameson1',
+age: 251
+},
+{
+first_name:'Tom2',
+last_name: 'Jameson2',
+age: 252
+},
+{
+first_name:'Tom3',
+last_name: 'Jameson3',
+age: 253
+}
+])
+
+
+
+// Выборка с условием
+db.workers.find({условие})
+// Операторы сравнения
+// $eq : значения равны - equal
+// $ne : значения не равны - not equal
+// $gt : значение больше другого значения - greater than
+// $gte : значение больше или равно другому значению - greater than equal
+// $lt : значение меньше другого значения - less than
+// $lte : значение меньше или равно другому значению - less than equal
+// $in : значение соответствует одному из значений в массиве
+
+db.workers.find({firstname:'Инна'})
+
+
+//вывести сотрудников у кого зп меньше 4000
+db.workers.find({salary:{$lt:4000}})
+
+//вывести сотрудников у кого зп > 4000
+db.workers.find({salary:{$gt:4000}})
+
+Вывести сотрудника с именем Никита.
+db.workers.find({firstname : 'Никита'})
+
+Вывести сотрудников с зарплатой не больше 5000.
+db.workers.find({salary:{$gt:5000}})
+
+Вывести всех сотрудников кроме Никиты.
+db.workers.find({firstname:{$ne:'Никита'}})
+
+//новая БД
+use tasks
+
+db.tasks.insertMany([
+  {
+_id: 1,
+title:'Potato',
+price: 370,
+count: 5,
+country: 'Germany'
+},
+ {
+_id: 2,
+title:'Onion',
+price: 320,
+count: 3,
+country: 'Poland'
+},
+ {
+_id: 3,
+title:'Tomato',
+price: 210,
+count: 9,
+country: 'Spain'
+},
+ {
+_id: 4,
+title:'Carrot',
+price: 280,
+count: 4,
+country: 'France'
+}
+])
+
+
+// Вывести все данные из коллекции
+db.tasks.find()
+
+// Вывести только те данные, где кол/во больше 5
+db.tasks.find({count:{$gt:5}})
+
+// Вывести данные, где цена меньше/равно 300
+db.tasks.find({price:{$lte:300}})
+
+// Вывести данные, где страна либо Испания, либо Франция
+
+db.tasks.find({ country: { $in: ['Spain', 'France'] } })
+
+// cls - Очищает скрипт/консоль
+// show databases - Показывает все бд
+// show collections - Показывает все коллекции в бд
+// db.dropDatabase() - Удалит бд
+// db.collection_name.drop() - Удалит коллекцию
+
+// db.collection_name.deleteOne({Условие}) - Удалит первую запись соответствующий запросу
+// db.collection_name.deleteMany({Условие}) - - Удалит все записи соответствующие запросу
+
+// new database
+use new_tasks
+
+db.users.insertMany([
+  {
+_id: 1,
+firsta_name:'Joht',
+last_name: 'Smith',
+age: 30
+},
+ {
+_id: 2,
+firsta_name:'Bob',
+last_name: 'Brown',
+age: 36
+},
+ {
+_id: 3,
+firsta_name:'Derek',
+last_name: 'Smith',
+age: 27
+},
+{
+_id: 4,
+firsta_name:'Leo',
+last_name: 'Brown',
+age: 23
+},
+{
+_id: 5,
+firsta_name:'Lily',
+last_name: 'Jonson',
+age: 21
+},
+{
+_id: 6,
+firsta_name:'John',
+last_name: 'King',
+age: 27
+}
+])
+
+// Вывести всех пользователей
+db.users.find()
+
+// Вывести пользователей, которым больше 25
+db.users.find({age:{$gt:25}})
+
+// Удалить первого пользователя, которому меньше 25
+db.users.deleteOne({age:{$lt:25}})
+// Удалить всех пользователей, которым больше 25
+db.users.deleteMany({age: {$gt:25}})
+
+
+
+// Удалить коллекцию users
+db.users.drop()
+// Удалить бд new_tasks
+db.dropDatabase()
+
+
+
+
+
+
+
