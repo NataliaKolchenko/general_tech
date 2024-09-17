@@ -1,0 +1,89 @@
+Ограничение количества выводимых значений 
+db.employees.find().limit(1)
+
+Сколько документов пропустить 
+db.employees.find().skip(2)
+
+db.employees.find().skip(1).limit(1)
+
+Сортировка по возрастанию
+db.employees.find().sort({age : 1})
+
+
+Сортировка по убыванию
+db.employees.find().sort({age : -1})
+
+db.employees.find().sort({age : -1}).limit(1)
+
+db.employees.find().sort({age : -1}).skip(1).limit(1)
+
+
+Создание собственной функции
+function insertEmployee(id, firstname, lastname, age, position) {
+db.employees.insertOne({
+	_id: id,
+firstname: firstname,
+lastname: lastname,
+age: age,
+position: position
+});
+}
+
+Использование написанной функции
+insertEmployee(6, "Alex", "Demianov",23, "Bartender")
+
+
+Создание собственной функции ( c добавлением массива
+function insertEmployee(id, firstname, lastname, age, position, skills) {
+db.employees.insertOne({
+	_id: id,
+firstname: firstname,
+lastname: lastname,
+age: age,
+position: position,
+skills: skills
+});
+}
+
+
+insertEmployees(4, 'Egor', 'Egorov', 30, 'Barista',['language','hardskill'])
+
+
+
+
+db.employees.find({ _id: { $in: [3, 4,5] } })
+db.employees.find().skip(2).limit(3)
+ 
+
+db.employees.find().sort({age : 1})
+ 
+
+db.employees.find().sort({salary : -1})
+
+db.employees.find().sort({salary : -1}).limit(1)
+ 
+
+db.employees.find().sort({salary : 1}).limit(3)
+ 
+Если добавить условие, что зп больше 0, то будет такой запрос
+db.employees.find({salary:{$gt:0}}).sort({salary : 1}).limit(3)
+
+Вывести 1 скилл из массива скиллов у работника Ольги
+// $slice - только для массивов, включает в себя limit 
+db.employees.find({firstname:"Olga"}, {skills: {$slice: 1}})
+
+// $slice - только для массивов, включает в себя  skip + limit
+db.employees.find({firstname:"Olga"}, {skills: {$slice: [1,1]}})
+[1,1] - первая 1 - сколько пропустить, вторая 1 - сколько вывести после пропуска
+
+
+
+
+
+
+
+
+
+
+
+
