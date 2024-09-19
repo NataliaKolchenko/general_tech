@@ -1,0 +1,42 @@
+False - выведет где нет поля «зарплата»
+Екну - выведет где есть поле «зарплата»
+db.employees.find({salary: {$exists: false}})
+
+
+
+// print 3 worker with big salary
+db.employees.find().sort({salary: -1}).skip(2).limit(1)
+
+// print worker with 2 small salary from the end
+db.employees.find().sort({salary: 1}).skip(1).limit(1)
+
+//вывести всех кроме первого и второго
+db.employees.find().skip(2)
+
+// вывести всех кроме первого и второго самого высокооплачиеваемого
+db.employees.find().sort({salary: -1}).skip(2)
+
+// вывести только последний навык у всех сотрудников
+db.employees.find({},{skills: {$slice: -1}})
+
+// вывесьти второй навык у всех сотрудников
+db.employees.find({},{skills: {$slice: [1,1]}})
+
+//вывести последний навык у сотрудника Marina
+db.employees.find({firstname:"Marina"},{skills: {$slice: -1}})
+
+//вывести сотрудников без навыков
+db.employees.find({skills: {$exists: false}})
+
+Убрать поле ИД из полученной выборки
+db.employees.find({firstname:"Olga"},{_id:0})
+
+Вывести только фамилию у сотрудника Ольги
+db.employees.find({firstname:"Olga"},{lastname:1}) 
+//здесь выведется фамилия и ИД
+
+Вывести только фамилию у сотрудника Ольги без ИД
+db.employees.find({firstname:"Olga"},{lastname:1, _id:0})
+
+
+
